@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  margin: auto;
+  width: 50%;
+  border: solid 1px black;
+  text-align: center;
+}
+
+#messageBox, #inputBox {
+  margin: 1em;
+  border: solid 1px red;
+}
+
+#inputBox {
+  display: flex;
+}
+
+#inputBox .btn {
+  flex: 1;
+}
+
+#inputBox .text {
+  flex: 7;
+}
+
+.message {
+  line-height: 1.5em;
+  border: 1px #AAA;
+  border-bottom-style: dashed;
+}
+
+.message-left {
+  text-align: left;
+}
+
+.message-right {
+  text-align: right;
+}
+
+#login-form {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 1em;
+}
