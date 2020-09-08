@@ -10,7 +10,19 @@ export default function Chat() {
     }
     useEffect(() => {
         ws.onmessage = function(event) {
-            addMessage(JSON.parse(event.data));
+            const newMessage = JSON.parse(event.data);
+            const notification = new Notification(`${newMessage.author}: ${newMessage.msg}`);
+            addMessage(newMessage);
+        }
+    });
+
+    useEffect(() => {
+        if (!("Notification" in window)) {
+            alert("Not support");
+            return;
+        }
+        if (Notification.permission === "default") {
+            Notification.requestPermission();
         }
     });
 
