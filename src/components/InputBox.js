@@ -9,7 +9,7 @@ export default function InputBox({ handleSubmit = f => f }) {
       <form id="inputBox" onSubmit={(e) => {
           e.preventDefault();
           // handleSubmit({author: username, msg: text});
-          ws.send(JSON.stringify({author: username, msg: text}));
+          ws.send(JSON.stringify({type:"chat", author: username, msg: text}));
           setText("");
         }}>
         <input className="text"
